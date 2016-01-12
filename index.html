@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Survey Master</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="scss/reset.css">
+	<link rel="stylesheet" href="scss/styles.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+<body>
+	<header></header>
+	<div class="page">
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>How likely are you to recommend adidas to a friend?</h1>
+				<ul class="answers">
+					<li class="answer">0<span class="tooltip">Not a chance</span></li>
+					<li class="answer">1<span class="tooltip">Very unlikely</span></li>
+					<li class="answer">2<span class="tooltip">Unlikely</span></li>
+					<li class="answer">3<span class="tooltip">Probably not</span></li>
+					<li class="answer">4<span class="tooltip">I doubt it</span></li>
+					<li class="answer">5<span class="tooltip">Undecided</span></li>
+					<li class="answer">6<span class="tooltip">Possibly</span></li>
+					<li class="answer">7<span class="tooltip">Probably</span></li>
+					<li class="answer">8<span class="tooltip">Very likely</span></li>
+					<li class="answer">9<span class="tooltip">Definately</span></li>
+					<li class="answer">10<span class="tooltip">I already have</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+
+		<div class="question_container">
+			<div class="question q_checkbox">
+				<h1>Which do you like?</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">Originals</span></li>
+					<li class="answer"><span class="tooltip">Football</span></li>
+					<li class="answer"><span class="tooltip">Running</span></li>
+					<li class="answer"><span class="tooltip">Training</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="question_container">
+			<div class="question q_sortable">
+				<h1>Rank in order of your favourite</h1>
+				<ul class="answers sortable">
+					<li class="answer"><span class="tooltip">Originals</span></li>
+					<li class="answer"><span class="tooltip">Football</span></li>
+					<li class="answer"><span class="tooltip">Running</span></li>
+					<li class="answer"><span class="tooltip">Training</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+
+		<div class="question_container">
+			<div class="question q_radio_vertical single_answer">
+				<h1>Which do you prefer?</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">Men</span></li>
+					<li class="answer"><span class="tooltip">Women</span></li>
+					<li class="answer"><span class="tooltip">Other</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+
+		<div class="question_container">
+			<div class="question q_images">
+				<h1>Which brand is for you?</h1>
+				<ul class="answers">
+					<li class="answer"><img src="images/logo_adidas.png" alt="" width="100" height="100"><span class="tooltip">Performance</span></li>
+					<li class="answer"><img src="images/logo_originals.png" alt="" width="100" height="100"><span class="tooltip">Originals</span></li>
+					<li class="answer"><img src="images/logo_neo.png" alt="" width="100" height="100"><span class="tooltip">Neo</span></li>
+					<li class="answer"><img src="images/logo_miadidas.png" alt="" width="100" height="100"><span class="tooltip">miAdidas</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+
+		<div class="question_container">
+			<div class="question q_textbox">
+				<h1>Tell me a story</h1>
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Write your answer here."></textarea>	
+			</div>
+		</div><!--CONTAINER -->
+
+
+		<div class="question_container">
+			<div class="question q_email">
+				<h1>What is your email address</h1>
+				<input type="email" placeholder="E.g john@adidas.com">
+			</div>
+		</div><!--CONTAINER -->
+
+
+	</div>
+</body>
+</html>
