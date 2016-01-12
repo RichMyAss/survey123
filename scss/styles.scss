@@ -440,9 +440,33 @@ header{
 			}			
 		}
 
-		.submit{
+        .submit_field{
+			
+		    margin: 0 auto;
+		    padding: 100px 0;
+		    width: 1000px;
+		    text-align: center;
+    
+        	.submit_button{
+				padding:2px 50px 0;
+				line-height: 60px;
+				text-transform: uppercase;
+				font-family: 'AdiConReg';
+				font-size:20px;
+				color:$blue;
+				box-shadow: 0 0 0 2px $blue;
+				background:$white;
+				display: inline-block;
+				margin:auto;
+				cursor:pointer;
+				@include transition(0.3s);
 
-		}
+				&:hover{
+					color:$white;
+					background:$blue;
+				}
+        	}
+        }
 	}
 }
 
@@ -616,6 +640,16 @@ header{
         				}
         			}
         		}
+        	}
+        }
+        .submit_field{
+			
+		    width: 100% !important;
+
+        	.submit_button{
+				width:80%;
+				margin:0 10%;
+		    	padding:0 !important;
         	}
         }
     }

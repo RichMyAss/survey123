@@ -331,6 +331,30 @@ header {
     transition: 0.3s; }
     .page .question_container .question.q_email input:focus {
       box-shadow: 0 0 0 2px #0286cd; }
+.page .question_container .submit_field {
+  margin: 0 auto;
+  padding: 100px 0;
+  width: 1000px;
+  text-align: center; }
+  .page .question_container .submit_field .submit_button {
+    padding: 2px 50px 0;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-family: 'AdiConReg';
+    font-size: 20px;
+    color: #0286cd;
+    box-shadow: 0 0 0 2px #0286cd;
+    background: #fff;
+    display: inline-block;
+    margin: auto;
+    cursor: pointer;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .page .question_container .submit_field .submit_button:hover {
+      color: #fff;
+      background: #0286cd; }
 
 @media screen and (max-width: 999px) {
   body .page {
@@ -420,6 +444,12 @@ header {
       body .page .question_container .question.q_email input {
         width: 80% !important;
         margin: 40px 5% 0;
-        padding: 5%; } }
+        padding: 5%; }
+  body .submit_field {
+    width: 100% !important; }
+    body .submit_field .submit_button {
+      width: 80%;
+      margin: 0 10%;
+      padding: 0 !important; } }
 
 /*# sourceMappingURL=styles.css.map */
