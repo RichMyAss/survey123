@@ -346,23 +346,26 @@ header {
         flex-direction: column; }
         body .page .question_container .question.q_images .answers .answer {
           margin: 40px auto 40px; }
-      body .page .question_container .question.q_checkbox .answers, body .page .question_container .question.q_radio_vertical .answers {
+      body .page .question_container .question.q_checkbox .answers, body .page .question_container .question.q_radio_vertical .answers, body .page .question_container .question.q_sortable .answers {
         width: 80% !important;
         margin: 40px 10% 0; }
-        body .page .question_container .question.q_checkbox .answers .answer, body .page .question_container .question.q_radio_vertical .answers .answer {
+        body .page .question_container .question.q_checkbox .answers .answer, body .page .question_container .question.q_radio_vertical .answers .answer, body .page .question_container .question.q_sortable .answers .answer {
           width: 100%;
           height: 60px;
           line-height: 60px;
           text-align: center;
           margin-left: 0; }
-          body .page .question_container .question.q_checkbox .answers .answer.active, body .page .question_container .question.q_checkbox .answers .answer:hover, body .page .question_container .question.q_radio_vertical .answers .answer.active, body .page .question_container .question.q_radio_vertical .answers .answer:hover {
+          body .page .question_container .question.q_checkbox .answers .answer.active, body .page .question_container .question.q_checkbox .answers .answer:hover, body .page .question_container .question.q_radio_vertical .answers .answer.active, body .page .question_container .question.q_radio_vertical .answers .answer:hover, body .page .question_container .question.q_sortable .answers .answer.active, body .page .question_container .question.q_sortable .answers .answer:hover {
             background: #0286cd; }
-            body .page .question_container .question.q_checkbox .answers .answer.active:after, body .page .question_container .question.q_checkbox .answers .answer:hover:after, body .page .question_container .question.q_radio_vertical .answers .answer.active:after, body .page .question_container .question.q_radio_vertical .answers .answer:hover:after {
+            body .page .question_container .question.q_checkbox .answers .answer.active:after, body .page .question_container .question.q_checkbox .answers .answer:hover:after, body .page .question_container .question.q_radio_vertical .answers .answer.active:after, body .page .question_container .question.q_radio_vertical .answers .answer:hover:after, body .page .question_container .question.q_sortable .answers .answer.active:after, body .page .question_container .question.q_sortable .answers .answer:hover:after {
               display: none; }
-            body .page .question_container .question.q_checkbox .answers .answer.active .tooltip, body .page .question_container .question.q_checkbox .answers .answer:hover .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer.active .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer:hover .tooltip {
+            body .page .question_container .question.q_checkbox .answers .answer.active .tooltip, body .page .question_container .question.q_checkbox .answers .answer:hover .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer.active .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer:hover .tooltip, body .page .question_container .question.q_sortable .answers .answer.active .tooltip, body .page .question_container .question.q_sortable .answers .answer:hover .tooltip {
               color: #fff; }
-          body .page .question_container .question.q_checkbox .answers .answer .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer .tooltip {
+          body .page .question_container .question.q_checkbox .answers .answer .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer .tooltip, body .page .question_container .question.q_sortable .answers .answer .tooltip {
             margin-left: 0; }
+      body .page .question_container .question.q_checkbox .ui-state-highlight, body .page .question_container .question.q_radio_vertical .ui-state-highlight, body .page .question_container .question.q_sortable .ui-state-highlight {
+        width: 100% !important;
+        margin-left: 0 !important; }
       body .page .question_container .question.q_radio_vertical .answers .answer {
         border-radius: 50px !important; }
       body .page .question_container .question.q_radio .answers {

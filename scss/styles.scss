@@ -476,7 +476,7 @@ header{
 	        				}
         				}
         			}
-        			&.q_checkbox, &.q_radio_vertical{
+        			&.q_checkbox, &.q_radio_vertical, &.q_sortable{
 
 						.answers{
 
@@ -506,6 +506,10 @@ header{
 									margin-left:0;
 								}	
 							}
+						}
+						.ui-state-highlight{
+							width:100% !important;
+							margin-left:0 !important;
 						}
 					}
 					&.q_radio_vertical{
