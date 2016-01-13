@@ -514,7 +514,7 @@ header{
 								text-align: center;
    								margin-left: 0;
 
-								&.active, &:hover{
+								&.active{
 
 									background:$blue;
 
@@ -524,6 +524,21 @@ header{
 									.tooltip{
 										color:$white;
 									}
+								}
+
+								&:hover{
+
+									background:$lightgrey;
+									color:$grey;
+									border-color:$grey;
+
+									&:after{
+										display: none;
+									}
+									.tooltip{
+										color:$white;
+									}
+	
 								}
 
 								.tooltip{
@@ -599,6 +614,7 @@ header{
 								}
 								&:hover{
 
+									background:$lightgrey;
 									color:rgba(0,0,0,0);
 
 									.tooltip{

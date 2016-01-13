@@ -379,11 +379,19 @@ header {
           line-height: 60px;
           text-align: center;
           margin-left: 0; }
-          body .page .question_container .question.q_checkbox .answers .answer.active, body .page .question_container .question.q_checkbox .answers .answer:hover, body .page .question_container .question.q_radio_vertical .answers .answer.active, body .page .question_container .question.q_radio_vertical .answers .answer:hover, body .page .question_container .question.q_sortable .answers .answer.active, body .page .question_container .question.q_sortable .answers .answer:hover {
+          body .page .question_container .question.q_checkbox .answers .answer.active, body .page .question_container .question.q_radio_vertical .answers .answer.active, body .page .question_container .question.q_sortable .answers .answer.active {
             background: #0286cd; }
-            body .page .question_container .question.q_checkbox .answers .answer.active:after, body .page .question_container .question.q_checkbox .answers .answer:hover:after, body .page .question_container .question.q_radio_vertical .answers .answer.active:after, body .page .question_container .question.q_radio_vertical .answers .answer:hover:after, body .page .question_container .question.q_sortable .answers .answer.active:after, body .page .question_container .question.q_sortable .answers .answer:hover:after {
+            body .page .question_container .question.q_checkbox .answers .answer.active:after, body .page .question_container .question.q_radio_vertical .answers .answer.active:after, body .page .question_container .question.q_sortable .answers .answer.active:after {
               display: none; }
-            body .page .question_container .question.q_checkbox .answers .answer.active .tooltip, body .page .question_container .question.q_checkbox .answers .answer:hover .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer.active .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer:hover .tooltip, body .page .question_container .question.q_sortable .answers .answer.active .tooltip, body .page .question_container .question.q_sortable .answers .answer:hover .tooltip {
+            body .page .question_container .question.q_checkbox .answers .answer.active .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer.active .tooltip, body .page .question_container .question.q_sortable .answers .answer.active .tooltip {
+              color: #fff; }
+          body .page .question_container .question.q_checkbox .answers .answer:hover, body .page .question_container .question.q_radio_vertical .answers .answer:hover, body .page .question_container .question.q_sortable .answers .answer:hover {
+            background: #eee;
+            color: #bbb;
+            border-color: #bbb; }
+            body .page .question_container .question.q_checkbox .answers .answer:hover:after, body .page .question_container .question.q_radio_vertical .answers .answer:hover:after, body .page .question_container .question.q_sortable .answers .answer:hover:after {
+              display: none; }
+            body .page .question_container .question.q_checkbox .answers .answer:hover .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer:hover .tooltip, body .page .question_container .question.q_sortable .answers .answer:hover .tooltip {
               color: #fff; }
           body .page .question_container .question.q_checkbox .answers .answer .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer .tooltip, body .page .question_container .question.q_sortable .answers .answer .tooltip {
             margin-left: 0; }
@@ -427,6 +435,7 @@ header {
             body .page .question_container .question.q_radio .answers .answer .tooltip:before {
               display: none; }
           body .page .question_container .question.q_radio .answers .answer:hover {
+            background: #eee;
             color: transparent; }
             body .page .question_container .question.q_radio .answers .answer:hover .tooltip {
               -webkit-transform: inherit;
