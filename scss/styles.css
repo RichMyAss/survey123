@@ -388,7 +388,7 @@ header {
           body .page .question_container .question.q_checkbox .answers .answer:hover, body .page .question_container .question.q_radio_vertical .answers .answer:hover, body .page .question_container .question.q_sortable .answers .answer:hover {
             background: #eee;
             color: #bbb;
-            border-color: #bbb; }
+            box-shadow: inset 0 0 0 2px #bbb; }
             body .page .question_container .question.q_checkbox .answers .answer:hover:after, body .page .question_container .question.q_radio_vertical .answers .answer:hover:after, body .page .question_container .question.q_sortable .answers .answer:hover:after {
               display: none; }
             body .page .question_container .question.q_checkbox .answers .answer:hover .tooltip, body .page .question_container .question.q_radio_vertical .answers .answer:hover .tooltip, body .page .question_container .question.q_sortable .answers .answer:hover .tooltip {
