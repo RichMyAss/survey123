@@ -105,17 +105,6 @@ header{
 							}
 						}
 
-						&:hover{
-							background:$blue;
-							color:$white;
-							box-shadow:inset 0 0 0 25px $blue;
-
-							.tooltip{
-								opacity:1;
-								-webkit-transform:translateY(20px);
-								visibility: inherit;
-							}
-						}
 						&.active{
 							background:$lightgrey;
 							color:$blue;
@@ -187,25 +176,6 @@ header{
 						position:relative;
 						font-size:16px;
 
-						&:hover{
-							background:$blue;
-							color:$blue;
-							box-shadow:inset 0 0 0 25px $blue;
-
-							&:after{
-
-								content: "";
-							    width: 8px;
-							    height: 17px;
-							    border-bottom: 4px solid $white;
-							    border-right: 4px solid $white;
-							    position: absolute;
-							    left: 14px;
-							    top: 7px;
-							    -webkit-transform: rotate(40deg);
-							}
-						}
-
 						&.active{
 							background:$lightgrey;
 							color:$blue;
@@ -255,25 +225,6 @@ header{
 						cursor:pointer;
 						position:relative;
 						font-size:16px;
-
-						&:hover{
-							background:$blue;
-							color:$blue;
-							box-shadow:inset 0 0 0 25px $blue;
-
-							&:after{
-
-								content: "";
-							    width: 8px;
-							    height: 17px;
-							    border-bottom: 4px solid $white;
-							    border-right: 4px solid $white;
-							    position: absolute;
-							    left: 14px;
-							    top: 7px;
-							    -webkit-transform: rotate(40deg);
-							}
-						}
 
 						&.active{
 							background:$lightgrey;
@@ -325,11 +276,6 @@ header{
 						font-size:16px;
 						padding:10px;
 
-						&:hover{
-							color:$blue;
-							box-shadow:inset 0 0 0 60px $white, 0 0 0 2px darken($lightgrey, 1.5%);
-						}
-
 						&.active{
 							color:$blue;
 							box-shadow:inset 0 0 0 60px #fff, 0 0 0 2px #0286cd;
@@ -368,17 +314,6 @@ header{
 						text-align:center;
 						font-family: 'AdiConReg';
 						font-size:20px;
-
-
-						&:hover{
-							background:$blue;
-							color:$white;
-							box-shadow:inset 0 0 0 25px $blue, 0 5px 25px rgba(0,0,0,0.25);
-
-							.tooltip{
-								color:$white;
-							}
-						}
 
 						.tooltip{
 							text-align: center;
@@ -460,11 +395,6 @@ header{
 				margin:auto;
 				cursor:pointer;
 				@include transition(0.3s);
-
-				&:hover{
-					color:$white;
-					background:$blue;
-				}
         	}
         }
 	}
@@ -524,21 +454,6 @@ header{
 									.tooltip{
 										color:$white;
 									}
-								}
-
-								&:hover{
-
-									background:$lightgrey;
-									color:$grey;
-									box-shadow:inset 0 0 0 2px $grey;
-
-									&:after{
-										display: none;
-									}
-									.tooltip{
-										color:$white;
-									}
-	
 								}
 
 								.tooltip{
@@ -612,16 +527,6 @@ header{
 										display: none;
 									}
 								}
-								&:hover{
-
-									background:$lightgrey;
-									color:rgba(0,0,0,0);
-
-									.tooltip{
-										-webkit-transform:inherit;
-										color:$white;
-									}
-								}
 								&.active{
 
 									color:rgba(0,0,0,0);
@@ -671,4 +576,137 @@ header{
     }
 }
 
+// DESKTOP HOVER STATES
+@media screen and (min-width: 999px) {
+
+.page{
+
+	.question_container{
+
+		.question{
+
+			&.q_radio{
+
+				.answers{
+
+					.answer{
+
+						&:hover{
+							background:$blue;
+							color:$white;
+							box-shadow:inset 0 0 0 25px $blue;
+
+							.tooltip{
+								opacity:1;
+								-webkit-transform:translateY(20px);
+								visibility: inherit;
+							}
+						}
+					}
+				}
+			}
+
+			&.q_checkbox{
+
+				.answers{
+
+					.answer{
+
+						&:hover{
+							background:$blue;
+							color:$blue;
+							box-shadow:inset 0 0 0 25px $blue;
+
+							&:after{
+
+								content: "";
+							    width: 8px;
+							    height: 17px;
+							    border-bottom: 4px solid $white;
+							    border-right: 4px solid $white;
+							    position: absolute;
+							    left: 14px;
+							    top: 7px;
+							    -webkit-transform: rotate(40deg);
+							}
+						}
+					}
+				}
+			}
+
+			&.q_radio_vertical{
+
+				.answers{
+
+					.answer{
+
+						&:hover{
+							background:$blue;
+							color:$blue;
+							box-shadow:inset 0 0 0 25px $blue;
+
+							&:after{
+
+								content: "";
+							    width: 8px;
+							    height: 17px;
+							    border-bottom: 4px solid $white;
+							    border-right: 4px solid $white;
+							    position: absolute;
+							    left: 14px;
+							    top: 7px;
+							    -webkit-transform: rotate(40deg);
+							}
+						}
+					}
+				}
+			}
+
+			&.q_images{
+
+				.answers{
+
+					.answer{
+
+						&:hover{
+							color:$blue;
+							box-shadow:inset 0 0 0 60px $white, 0 0 0 2px darken($lightgrey, 1.5%);
+						}
+					}
+				}
+			}
+
+			&.q_sortable{
+
+				.answers{
+
+					.answer{
+
+						&:hover{
+							background:$blue;
+							color:$white;
+							box-shadow:inset 0 0 0 25px $blue, 0 5px 25px rgba(0,0,0,0.25);
+
+							.tooltip{
+								color:$white;
+							}
+						}
+					}
+				}
+			}
+		}
+
+        .submit_field{
+    
+        	.submit_button{
+
+				&:hover{
+					color:$white;
+					background:$blue;
+				}
+        	}
+        }
+	}
+}
+}
 
