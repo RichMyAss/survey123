@@ -17,9 +17,23 @@ $(document).ready(function(){
 
 	$(function() {
 	    $( ".sortable" ).sortable({
-	    	placeholder: "ui-state-highlight"
+	    	placeholder: "ui-state-highlight",
+	    	tolerance: 'pointer',
+         	revert: 300
 	    });
 	    $( ".sortable" ).disableSelection();
+	});
+
+	$(window).resize(function(){
+
+		if($(window).width()<1000){
+			mobile = true;
+		}else{
+			mobile = false;
+		}
+
+		alignTooltips();
+
 	});
 
 	// PREVENT SCROLL ON MOBILE DRAG
@@ -48,6 +62,8 @@ $(document).ready(function(){
 var mobile;
 
 function alignTooltips(){
+	
+
 	$('.q_radio .tooltip').each(function(){
 
 		//GET ITEM
@@ -61,6 +77,10 @@ function alignTooltips(){
 		if(!mobile){
 			tooltip.css({
 				"marginLeft":realign
+			});
+		}else{
+			tooltip.css({
+				"marginLeft":0
 			});
 		}
 	})

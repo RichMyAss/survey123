@@ -7,19 +7,44 @@
   font-family: AdiConBold;
   src: url(../fonts/AdihausDIN-CondBold.woff); }
 @font-face {
-  font-family: AdiNeueBold;
-  src: url(../fonts/adi13wf-b.woff); }
+  font-family: AdiPro;
+  src: url(../fonts/adineuePRO-BlackWeb.eot);
+  src: url(../fonts/adineuePRO-BlackWeb.ttf); }
 body {
   background: #eee;
-  font-family: arial;
-  -webkit-font-smoothiing: antialiased;
+  font-family: 'adiConReg',arial;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; }
 
 header {
   height: 400px;
   width: 100%;
-  background: #000; }
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  background: url("../images/header.jpg") center center no-repeat; }
+  header .header_container {
+    width: 600px;
+    margin: auto; }
+    header .header_container img.logo {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      display: block; }
+    header .header_container .title {
+      font-family: 'adiPro';
+      font-size: 32px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 10px 0 20px 0; }
+    header .header_container .body_copy {
+      text-align: center;
+      opacity: 0.85;
+      font-size: 20px;
+      line-height: 28px;
+      padding: 0 30px; }
 
 .page .question_container:nth-child(2n) {
   background: #e6e6e6; }
@@ -31,10 +56,24 @@ header {
     width: 100%;
     font-size: 28px;
     color: #666;
-    margin: 10px 0;
+    margin: 10px 0 30px;
     font-weight: 100;
     text-align: center;
     font-family: 'AdiConReg', arial; }
+  .page .question_container .question p {
+    font-size: 18px;
+    line-height: 26px;
+    color: #999;
+    text-align: center; }
+  .page .question_container .question .tooltip {
+    font-family: 'AdiConReg';
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-size: 20px;
+    white-space: nowrap;
+    color: #999; }
   .page .question_container .question.q_radio .answers {
     display: flex;
     justify-content: center;
@@ -42,8 +81,8 @@ header {
     .page .question_container .question.q_radio .answers .answer {
       width: 40px;
       height: 40px;
-      line-height: 42px;
-      color: #bbb;
+      line-height: 44px;
+      color: #999;
       background: #eee;
       border-radius: 50%;
       text-align: center;
@@ -56,7 +95,7 @@ header {
       cursor: pointer;
       position: relative;
       display: inline-block;
-      font-size: 16px; }
+      font-size: 20px; }
       .page .question_container .question.q_radio .answers .answer:before {
         content: '';
         border-bottom: 2px solid #bbb;
@@ -142,13 +181,7 @@ header {
           top: 7px;
           -webkit-transform: rotate(40deg); }
       .page .question_container .question.q_checkbox .answers .answer .tooltip {
-        font-family: 'AdiConReg';
-        -moz-transition: 0.3s;
-        -o-transition: 0.3s;
-        -webkit-transition: 0.3s;
-        transition: 0.3s;
-        margin-left: 70px;
-        font-size: 20px; }
+        margin-left: 70px; }
   .page .question_container .question.q_radio_vertical .answers {
     width: 600px;
     margin: 40px auto 0; }
@@ -244,8 +277,8 @@ header {
         position: absolute;
         width: 30px;
         height: 12px;
-        border-bottom: 2px solid rgba(2, 134, 205, 0.25);
-        border-top: 2px solid rgba(2, 134, 205, 0.25);
+        border-bottom: 2px solid #ddd;
+        border-top: 2px solid #ddd;
         right: 20px;
         top: 22px; }
       .page .question_container .question.q_sortable .answers .answer:before {
@@ -253,7 +286,7 @@ header {
         position: absolute;
         width: 30px;
         height: 7px;
-        border-bottom: 2px solid rgba(2, 134, 205, 0.25);
+        border-bottom: 2px solid #ddd;
         right: 20px;
         top: 22px; }
       .page .question_container .question.q_sortable .answers .answer .tooltip {
@@ -286,7 +319,7 @@ header {
     transition: 0.3s; }
     .page .question_container .question.q_textbox textarea:focus {
       box-shadow: 0 0 0 2px #0286cd; }
-  .page .question_container .question.q_email input {
+  .page .question_container .question.q_form input {
     outline: none;
     border: none;
     resize: none;
@@ -295,35 +328,36 @@ header {
     padding: 20px;
     color: #666;
     width: 600px;
-    margin: 40px auto 0;
+    margin: 10px auto 0;
     display: block;
     -moz-transition: 0.3s;
     -o-transition: 0.3s;
     -webkit-transition: 0.3s;
     transition: 0.3s; }
-    .page .question_container .question.q_email input:focus {
+    .page .question_container .question.q_form input:focus {
       box-shadow: 0 0 0 2px #0286cd; }
-.page .question_container .submit_field {
-  margin: 0 auto;
-  padding: 100px 0;
-  width: 1000px;
-  text-align: center; }
-  .page .question_container .submit_field .submit_button {
-    padding: 2px 50px 0;
-    line-height: 60px;
-    text-transform: uppercase;
-    font-family: 'AdiConReg';
-    font-size: 20px;
-    color: #0286cd;
-    box-shadow: 0 0 0 2px #0286cd;
-    background: #fff;
-    display: inline-block;
-    margin: auto;
-    cursor: pointer;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    -webkit-transition: 0.3s;
-    transition: 0.3s; }
+.page .submit_container {
+  background: #222; }
+  .page .submit_container .submit_field {
+    margin: 0 auto;
+    padding: 100px 0;
+    width: 1000px;
+    text-align: center; }
+    .page .submit_container .submit_field .submit_button {
+      padding: 2px 50px 0;
+      line-height: 60px;
+      text-transform: uppercase;
+      font-family: 'AdiConReg';
+      font-size: 20px;
+      color: #222;
+      background: #eee;
+      display: inline-block;
+      margin: auto;
+      cursor: pointer;
+      -moz-transition: 0.3s;
+      -o-transition: 0.3s;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
 
 @media screen and (max-width: 999px) {
   body .page {
@@ -363,6 +397,10 @@ header {
         border-color: #fff;
         left: 24px;
         top: 17px; }
+      body .page .question_container .question.q_sortable .answers .answer.active {
+        background: #eee; }
+        body .page .question_container .question.q_sortable .answers .answer.active .tooltip {
+          color: #0286cd; }
       body .page .question_container .question.q_radio .answers {
         flex-direction: column;
         width: 80% !important;
@@ -407,7 +445,7 @@ header {
         width: 80% !important;
         margin: 40px 5% 0;
         padding: 5%; }
-      body .page .question_container .question.q_email input {
+      body .page .question_container .question.q_form input {
         width: 80% !important;
         margin: 40px 5% 0;
         padding: 5%; }
@@ -465,8 +503,8 @@ header {
       border-color: rgba(255, 255, 255, 0.25); }
     .page .question_container .question.q_sortable .answers .answer:hover .tooltip {
       color: #fff; }
-  .page .question_container .submit_field .submit_button:hover {
-    color: #fff;
-    background: #0286cd; } }
+  .page .submit_container .submit_field .submit_button:hover {
+    box-shadow: inset 0 0 40px 40px #fff;
+    color: #0286cd; } }
 
 /*# sourceMappingURL=styles.css.map */

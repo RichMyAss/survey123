@@ -1,10 +1,11 @@
 /* VARIABLES*/
 $blue:#0286cd;
-$black:#000;
+$black:#222;
 $white:#fff;
 $lightgrey:#eee;
 $grey:#bbb;
 $text_color:#666;
+$darkgrey:#999;
 
 // MIXINS
 
@@ -25,14 +26,15 @@ $text_color:#666;
     src: url(../fonts/AdihausDIN-CondBold.woff);
 }
 @font-face {
-    font-family: AdiNeueBold;
-    src: url(../fonts/adi13wf-b.woff);
+    font-family: AdiPro;
+    src: url(../fonts/adineuePRO-BlackWeb.eot);
+    src: url(../fonts/adineuePRO-BlackWeb.ttf);
 }
 
 body{
 	background:$lightgrey;
-	font-family: arial;
-	-webkit-font-smoothiing:antialiased;
+	font-family: 'adiConReg',arial;
+	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering:optimizeLegibility;
 }
@@ -41,6 +43,38 @@ header{
 	height:400px;
 	width:100%;
 	background:$black;
+	color:$white;
+	display:flex;
+	justify-content:center;
+	background:url('../images/header.jpg') center center no-repeat;
+
+	.header_container{
+
+		width:600px;
+		margin:auto;
+
+		img.logo{
+			width:100px;
+			height:100px;
+		    margin: auto;
+		    display: block;
+
+		}
+		.title{
+			font-family:'adiPro';
+			font-size:32px;
+			text-align: center;
+			text-transform: uppercase;
+			margin: 10px 0 20px 0;
+		}
+		.body_copy{
+			text-align: center;
+			opacity:0.85;
+			font-size: 20px;
+			line-height: 28px;
+			padding: 0 30px;
+		}
+	}
 }
 
 .page{
@@ -60,12 +94,26 @@ header{
 				width:100%;
 				font-size:28px;
 				color:#666;
-				margin:10px 0;
+				margin:10px 0 30px;
 				font-weight: 100;
 				text-align:center;
 				font-family:'AdiConReg', arial;
 			}
+			p{
+				font-size:18px;
+				line-height:26px;
+				color:$darkgrey;
+				text-align:center;
+			}
+		
 
+			.tooltip{
+				font-family: 'AdiConReg';
+				@include transition(0.3s);
+				font-size:20px;
+				white-space: nowrap;
+				color:$darkgrey;
+			}
 			&.q_radio{
 
 				.answers{
@@ -77,8 +125,8 @@ header{
 					.answer{
 						width:40px;
 						height:40px;
-						line-height:42px;
-						color:$grey;
+						line-height:44px;
+						color:$darkgrey;
 						background:$lightgrey;
 						border-radius:50%;
 						text-align:center;
@@ -88,7 +136,7 @@ header{
 						cursor:pointer;
 						position:relative;
 						display:inline-block;
-						font-size:16px;
+						font-size:20px;
 
 						&:before{
 							content:'';
@@ -196,10 +244,7 @@ header{
 						}
 
 						.tooltip{
-							font-family: 'AdiConReg';
-							@include transition(0.3s);
 							margin-left:70px;
-							font-size:20px;
 						}
 					}
 				}
@@ -320,8 +365,8 @@ header{
 							position:absolute;
 							width:30px;
 							height:12px;
-							border-bottom:2px solid rgba($blue, 0.25);
-							border-top:2px solid rgba($blue, 0.25);
+							border-bottom:2px solid #ddd;
+							border-top:2px solid #ddd;
 							right:20px;
 							top:22px;
 						}
@@ -330,7 +375,7 @@ header{
 							position:absolute;
 							width:30px;
 							height:7px;
-							border-bottom:2px solid rgba($blue, 0.25);
+							border-bottom:2px solid #ddd;
 							right:20px;
 							top:22px;
 						}
@@ -370,9 +415,10 @@ header{
 
 						box-shadow: 0 0 0 2px $blue;
 					}
+
 				}
 			}
-			&.q_email{
+			&.q_form{
 
 				input{
 					outline:none;
@@ -383,7 +429,7 @@ header{
 					padding:20px;
 					color:$text_color;
 					width:600px;
-					margin:40px auto 0;
+					margin:10px auto 0;
 					display: block;
 					@include transition(0.3s);
 
@@ -394,8 +440,12 @@ header{
 				}
 			}			
 		}
+    }
+    .submit_container{
 
-        .submit_field{
+    	background:$black;
+
+    	.submit_field{
 			
 		    margin: 0 auto;
 		    padding: 100px 0;
@@ -408,16 +458,15 @@ header{
 				text-transform: uppercase;
 				font-family: 'AdiConReg';
 				font-size:20px;
-				color:$blue;
-				box-shadow: 0 0 0 2px $blue;
-				background:$white;
+				color:$black;
+				background:$lightgrey;
 				display: inline-block;
 				margin:auto;
 				cursor:pointer;
 				@include transition(0.3s);
         	}
         }
-	}
+    }
 }
 
 // MOBILE STYLES
@@ -512,6 +561,20 @@ header{
 							}
 						}
 					}
+					&.q_sortable{
+						.answers{
+							.answer{
+								&.active{
+									background:$lightgrey;
+
+									.tooltip{
+										color:$blue;
+
+									}
+								}
+							}
+						}
+					}
 
 
 							    
@@ -592,7 +655,7 @@ header{
         				}
         			}
 
-        			&.q_email{
+        			&.q_form{
         				
 
         				input{
@@ -717,6 +780,12 @@ header{
 				}
 			}
 
+			&.q_form, &.q_textbox{
+
+				textarea:hover, input:hover{
+				}
+			}
+
 			&.q_sortable{
 
 				.answers{
@@ -739,15 +808,17 @@ header{
 					}
 				}
 			}
-		}
+		}      
+	}
+	.submit_container{
 
-        .submit_field{
+		.submit_field{
     
         	.submit_button{
 
 				&:hover{
-					color:$white;
-					background:$blue;
+					box-shadow:inset 0 0 40px 40px $white;
+					color:$blue;
 				}
         	}
         }
