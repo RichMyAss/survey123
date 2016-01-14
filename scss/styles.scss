@@ -480,8 +480,12 @@ header{
         	.question_container{
 
 				h1{
-	        		margin:0 10% 5% !important;
+	        		margin:0 10% 10% !important;
 	        		width:80% !important;
+	        	}
+	        	p{
+	        		position: relative;
+    				top: -25px;
 	        	}
         		.question{
 					
@@ -540,6 +544,10 @@ header{
 						.answers{
 							.answer{
 								border-radius:50px !important;
+
+								&:after, &.active:after{
+									display:none;
+								}
 							}
 						}
 						
@@ -558,6 +566,9 @@ header{
     									top: 17px;
 									}
 								}
+							}
+							.tooltip{
+								white-space: normal !important;
 							}
 						}
 					}
@@ -616,7 +627,7 @@ header{
 								.tooltip{
 
 									background:none;
-									color:$grey;
+									color:$darkgrey;
 									top:0;
 									line-height:60px;
 									left:0;
@@ -660,7 +671,7 @@ header{
 
         				input{
         					width:80% !important;
-        					margin:40px 5% 0;
+        					margin:10px 5% 0;
         					padding:5%;
         				}
         			}

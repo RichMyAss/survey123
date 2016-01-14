@@ -364,8 +364,11 @@ header {
     width: 100%;
     overflow: hidden; }
     body .page .question_container h1 {
-      margin: 0 10% 5% !important;
+      margin: 0 10% 10% !important;
       width: 80% !important; }
+    body .page .question_container p {
+      position: relative;
+      top: -25px; }
     body .page .question_container .question {
       padding: 70px 0;
       width: 100%; }
@@ -393,10 +396,14 @@ header {
         margin-left: 0 !important; }
       body .page .question_container .question.q_radio_vertical .answers .answer {
         border-radius: 50px !important; }
+        body .page .question_container .question.q_radio_vertical .answers .answer:after, body .page .question_container .question.q_radio_vertical .answers .answer.active:after {
+          display: none; }
       body .page .question_container .question.q_checkbox .answers .answer.active:after {
         border-color: #fff;
         left: 24px;
         top: 17px; }
+      body .page .question_container .question.q_checkbox .answers .tooltip {
+        white-space: normal !important; }
       body .page .question_container .question.q_sortable .answers .answer.active {
         background: #eee; }
         body .page .question_container .question.q_sortable .answers .answer.active .tooltip {
@@ -423,7 +430,7 @@ header {
             height: 0; }
           body .page .question_container .question.q_radio .answers .answer .tooltip {
             background: none;
-            color: #bbb;
+            color: #999;
             top: 0;
             line-height: 60px;
             left: 0;
@@ -447,7 +454,7 @@ header {
         padding: 5%; }
       body .page .question_container .question.q_form input {
         width: 80% !important;
-        margin: 40px 5% 0;
+        margin: 10px 5% 0;
         padding: 5%; }
   body .submit_field {
     width: 100% !important; }
