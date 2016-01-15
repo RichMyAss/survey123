@@ -64,8 +64,7 @@ header {
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   -webkit-transition: 0.3s;
-  transition: 0.3s;
-  max-height: 1000px; }
+  transition: 0.3s; }
   .page .question_container .question h1 {
     width: 100%;
     font-size: 28px;
