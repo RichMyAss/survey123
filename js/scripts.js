@@ -14,6 +14,7 @@ $(document).ready(function(){
 	// $('.single_answer .answer').click(progressQuestion);
 	// $('input, textarea').blur(progressQuestion);
 	$('.answer').click(selectAnswer);
+	$('.submit_container .submit_button').click(submit);
 
 	$(function() {
 	    $( ".sortable" ).sortable({
@@ -147,5 +148,15 @@ function check_for_more_questions(q){
 	}
 	
 }
+
+function submit(){
+
+	$('.overlay').removeClass('hidden');
+
+}
+
+
+
+
 
 
