@@ -84,11 +84,26 @@ header{
 		&:nth-child(2n){
 			background:#e6e6e6;
 		}
+		.hidden{
+			visibility: hidden;
+			opacity:0;
+			max-height:0 !important;
+			padding:0 !important;
+		}
+		.extra_question{
+			padding-top:0 !important;
+
+			.div, textarea, input{
+				margin-top:0 !important;
+			}
+		}
 
 		.question{
 			margin:0 auto;
 			padding:100px 0;
 			width:1000px;
+			@include transition(0.3s);
+			max-height:1000px;
 			
 			h1{
 				width:100%;

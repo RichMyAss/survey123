@@ -26,8 +26,12 @@
 				<h1>I would personalize again on my next purchase</h1>
 				<ul class="answers">
 					<li class="answer"><span class="tooltip">Yes</span></li>
-					<li class="answer"><span class="tooltip">No</span></li>
+					<li class="answer show_extras" data-extra-q="a"><span class="tooltip">No</span></li>
 				</ul>
+
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Why not?"></textarea>	
 			</div>
 		</div><!--CONTAINER -->
 
@@ -38,9 +42,15 @@
 					<li class="answer"><span class="tooltip">Through someone I know</span></li>
 					<li class="answer"><span class="tooltip">From Adidas Communication (Newsletter, site banners, social media)</span></li>
 					<li class="answer"><span class="tooltip">Via an Online blog</span></li>
-					<li class="answer"><span class="tooltip">By chance on the Website</span></li>
-					<li class="answer"><span class="tooltip">Other</span></li>
+					<li class="answer show_extras" data-extra-q="a"=><span class="tooltip">By chance on the Website</span></li>
+					<li class="answer show_extras" data-extra-q="b"><span class="tooltip">Other</span></li>
 				</ul>
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="b">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Other options?"></textarea>	
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Which page?"></textarea>	
 			</div>
 		</div><!--CONTAINER -->
 
@@ -62,12 +72,28 @@
 			<div class="question q_radio single_answer">
 				<h1>It was easy to find Products which you can quick customize on Adidas.co.uk</h1>
 				<ul class="answers">
-					<li class="answer">1<span class="tooltip">Strongly Agree</span></li>
-					<li class="answer">2<span class="tooltip">Agree</span></li>
-					<li class="answer">3<span class="tooltip">Somewhat agree</span></li>
-					<li class="answer">4<span class="tooltip">Somewhat disagree</span></li>
-					<li class="answer">5<span class="tooltip">Disagree</span></li>
-					<li class="answer">6<span class="tooltip">Strongly disagree</span></li>
+					<li class="answer show_extras" data-extra-q="a">1<span class="tooltip">Strongly Agree</span></li>
+					<li class="answer show_extras" data-extra-q="a">2<span class="tooltip">Agree</span></li>
+					<li class="answer show_extras" data-extra-q="a">3<span class="tooltip">Somewhat agree</span></li>
+					<li class="answer show_extras" data-extra-q="b">4<span class="tooltip">Somewhat disagree</span></li>
+					<li class="answer show_extras" data-extra-q="b">5<span class="tooltip">Disagree</span></li>
+					<li class="answer show_extras" data-extra-q="b">6<span class="tooltip">Strongly disagree</span></li>
+				</ul>
+			</div>
+			<div class="question q_checkbox extra_question hidden" data-extra-q="a">
+				<h1>What did you like?</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">Price</span></li>
+					<li class="answer"><span class="tooltip">Speed</span></li>
+					<li class="answer"><span class="tooltip">Service</span></li>
+				</ul>
+			</div>
+			<div class="question q_checkbox extra_question hidden" data-extra-q="b">
+				<h1>What can we do to help?</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">Give a discount</span></li>
+					<li class="answer"><span class="tooltip">Make the user experience easier</span></li>
+					<li class="answer"><span class="tooltip">Make the process faster</span></li>
 				</ul>
 			</div>
 		</div><!--CONTAINER -->

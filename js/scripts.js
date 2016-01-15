@@ -11,8 +11,8 @@ $(document).ready(function(){
 	alignTooltips();
 
 	// INTERACTIONS
-	$('.single_answer .answer').click(progressQuestion);
-	$('input, textarea').blur(progressQuestion);
+	// $('.single_answer .answer').click(progressQuestion);
+	// $('input, textarea').blur(progressQuestion);
 	$('.answer').click(selectAnswer);
 
 	$(function() {
@@ -107,4 +107,45 @@ function selectAnswer(){
 	}
 	
 	$this.toggleClass('active');
+
+	//CHECK WHETHER TO SHOW HIDDEN QUESTIONS
+	check_for_more_questions($this);
 }
+
+function check_for_more_questions(q){
+
+	var data_extra_q = q.attr('data-extra-q');
+	var extra_question = q.parents('.question_container').find('.extra_question[data-extra-q=' + data_extra_q +']');
+	
+
+	//DEACTIVATE IF SINGLE ANSWER SIBLING IS SELECTED
+	if(q.parents('.question').hasClass('single_answer') && !q.hasClass('show_extras')) {
+
+		q.parents('.question_container').find('.extra_question').addClass('hidden');
+		return;
+
+	};
+
+	//DEACTIVATE IF DESELECTED
+	if(q.hasClass('active')){
+		//IF DEACTIVATING
+		
+		// HIDE OTHER EXTRA Q
+		extra_question.siblings('.extra_question').addClass('hidden');
+
+		// SHOW EXTRA Q WITH DATA_EXTRA_Q
+		extra_question.removeClass('hidden');
+
+	}else if(!q.parents('.question').hasClass('single_answer') && !q.hasClass('show_extras')){
+		//MULTI CHOICE DOES NOT DEACTIVATE
+		console.log('d');
+		return;
+
+	}else{
+		//ACTIVATING
+		extra_question.addClass('hidden');
+	}
+	
+}
+
+
