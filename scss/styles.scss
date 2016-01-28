@@ -151,6 +151,7 @@ header{
 						position:relative;
 						display:inline-block;
 						font-size:20px;
+						outline:none;
 
 						&:before{
 							content:'';
@@ -811,6 +812,8 @@ header{
 
 					.answer{
 
+						outline:none;
+
 						&:hover{
 							background:$blue;
 							color:$white;
@@ -860,6 +863,8 @@ header{
 
 					.answer{
 
+						outline:none;
+
 						&:hover{
 							background:$blue;
 							color:$blue;
@@ -888,6 +893,8 @@ header{
 
 					.answer{
 
+						outline:none;
+
 						&:hover{
 							color:$blue;
 							box-shadow:inset 0 0 0 60px $white, 0 0 0 2px darken($lightgrey, 1.5%);
@@ -907,6 +914,8 @@ header{
 				.answers{
 
 					.answer{
+						
+						outline:none;
 
 						&:hover{
 							background:$blue;
